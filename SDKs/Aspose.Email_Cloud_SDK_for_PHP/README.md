@@ -1,24 +1,11 @@
 # Aspose.Email Cloud SDK for PHP
-Aspose.Email for Cloud is a Cloud API to work with Email documents. This is the repository for Aspose.Email Cloud SDK for PHP. Using this SDK, Aspose.Email Cloud APIs can be easily used in PHP applications. 
+This repository contains Aspose.Email Cloud SDK for PHP source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your PHP applications quickly and easily.
 
-Installation
-----------------------------------
+<p align="center">
+  <a title="Download complete Aspose.Email for Cloud source code" href="https://github.com/asposeemail/Aspose_Email_Cloud/archive/master.zip">
+	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+  </a>
+</p>
 
-Add the following line to your composer.json file:
-
-```json
-// composer.json
-{
-    require: {
-        "aspose/email-sdk-php": "dev-master"
-    }
-}
-```
-
-Install the new dependencies by running `composer update` from the directory where your composer.json file is located.
-
-Start a Free Trial Today
-------------------------
-
-Start a free trial today – all you need is to [sign up](https://cloud.aspose.com/SignUp) with Aspose for Cloud service. Once you have signed up, you are ready to try powerful file processing features offered by Aspose for Cloud.
-
+##How to Use the SDK?
+The complete source code is available in this repository folder, you can either directly use it in your project or use Composer. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/emailcloud/How+to+Setup+Aspose.Email+Cloud+SDK+for+PHP).
