@@ -1,7 +1,7 @@
 # Aspose.Email for Cloud Repository
 This repository contains examples and SDKs for [Aspose.Email for Cloud](http://www.aspose.com/cloud/email-api.aspx).
 
-## Why SDKs
+## Why SDKs?
 Aspose.Email for Cloud is implemented as a REST API. If you use SDK, it hides the REST API calls and lets you use Aspose.Email features in a native way for your preferred language.
 
 <p align="center">
