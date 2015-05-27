@@ -1,4 +1,4 @@
-# Aspose.Email Cloud SDK for Java Repository
+# Aspose.Email Cloud SDK for Java
 This repository contains Aspose.Email Cloud SDK for Java source code. This SDK allows you to work with Aspose.Email Cloud REST APIs in your Java applications quickly and easily. 
 
 <p align="center">
