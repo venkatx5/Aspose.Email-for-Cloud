@@ -1,4 +1,4 @@
-# Aspose.Email for Cloud Repository
+# Aspose.Email for Cloud
 This repository contains examples and SDKs for [Aspose.Email for Cloud](http://www.aspose.com/cloud/email-api.aspx).
 
 ## Why SDKs?
