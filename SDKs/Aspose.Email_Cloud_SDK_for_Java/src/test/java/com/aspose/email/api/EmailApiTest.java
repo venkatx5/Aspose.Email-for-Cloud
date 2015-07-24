@@ -76,7 +76,7 @@ public class EmailApiTest {
 		String folder = "";
 
 		try {
-			ResponseMessage result = emailApi.GetDocument(name, storage, folder);
+			EmailDocument result = emailApi.GetDocument(name, storage, folder);
 
 
 		} catch (ApiException apiExp) {
@@ -140,7 +140,7 @@ public class EmailApiTest {
 		String folder = "";
 
 		try {
-			ResponseMessage result = emailApi.GetEmailProperty(propertyName, name, storage, folder);
+			 EmailPropertyResponse result = emailApi.GetEmailProperty(propertyName, name, storage, folder);
 
 
 		} catch (ApiException apiExp) {
