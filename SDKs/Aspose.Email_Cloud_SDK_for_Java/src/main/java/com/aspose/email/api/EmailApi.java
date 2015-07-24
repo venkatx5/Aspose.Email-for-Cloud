@@ -64,10 +64,10 @@ public class EmailApi {
 	* @param name	String	File name.
 	* @param storage	String	The document storage.
 	* @param folder	String	Folder path.
-	* @return ResponseMessage
+	* @return EmailDocument
 	*/
 
-  public ResponseMessage GetDocument (String name, String storage, String folder) {
+  public EmailDocument GetDocument (String name, String storage, String folder) {
     Object postBody = null;
     // verify required params are set
     if(name == null ) {
@@ -100,7 +100,7 @@ public class EmailApi {
 
 try {
 		response = apiInvoker.invokeAPI(basePath, resourcePath, "GET", queryParams, postBody, headerParams, formParams, contentType);
-		return (ResponseMessage) ApiInvoker.deserialize(response, "", ResponseMessage.class);
+		return (EmailDocument) ApiInvoker.deserialize(response, "", EmailDocument.class);
     } catch (ApiException ex) {
       if(ex.getCode() == 404) {
       	throw new ApiException(404, "");
@@ -236,10 +236,10 @@ try {
 	* @param name	String	File name
 	* @param storage	String	The document storage.
 	* @param folder	String	Folder path
-	* @return ResponseMessage
+	* @return EmailPropertyResponse
 	*/
 
-  public ResponseMessage GetEmailProperty (String propertyName, String name, String storage, String folder) {
+  public EmailPropertyResponse GetEmailProperty (String propertyName, String name, String storage, String folder) {
     Object postBody = null;
     // verify required params are set
     if(propertyName == null || name == null ) {
@@ -276,7 +276,7 @@ try {
 
 try {
 		response = apiInvoker.invokeAPI(basePath, resourcePath, "GET", queryParams, postBody, headerParams, formParams, contentType);
-		return (ResponseMessage) ApiInvoker.deserialize(response, "", ResponseMessage.class);
+		return (EmailPropertyResponse) ApiInvoker.deserialize(response, "", EmailPropertyResponse.class);
     } catch (ApiException ex) {
       if(ex.getCode() == 404) {
       	throw new ApiException(404, "");
