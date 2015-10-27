@@ -14,3 +14,4 @@ Directory | Description
 --------- | -----------
 [Java SDK](https://github.com/asposeemail/Aspose_Email_Cloud/tree/master/SDKs/Aspose.Email_Cloud_SDK_for_Java)  |  Aspose.Email Cloud SDK for Java.
 [PHP SDK](https://github.com/asposeemail/Aspose_Email_Cloud/tree/master/SDKs/Aspose.Email_Cloud_SDK_for_PHP)  | Aspose.Email Cloud SDK for PHP.
+[Python SDK](https://github.com/asposeemail/Aspose_Email_Cloud/tree/master/SDKs/Aspose.Email_Cloud_SDK_for_Python)  | Aspose.Email Cloud SDK for Python.
