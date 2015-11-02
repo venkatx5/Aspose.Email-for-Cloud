@@ -72,13 +72,18 @@ class APIClient {
     public function callAPI($resourcePath, $method, $queryParams, $postData, $headerParams) {
 
         $headers = array();
+        if ($headerParams != null) {
+            foreach ($headerParams as $key => $val) {
+                $headers[] = "$key: $val";
+            }
+        }
 
         if (is_object($postData) or is_array($postData)) {
             $postData = json_encode(self::sanitizeForSerialization($postData));
         }
         $resourcePath = str_replace("{appSid}", urlencode($this->appSid), $resourcePath);
         $url = rtrim($this->apiServer, "/") . $resourcePath;
-
+	
         /*
          * 
          * Sign URL starts
@@ -128,8 +133,22 @@ class APIClient {
 //		}
 
         if ($method == self::$POST) {
+            if (file_exists($postData)) {
+
+                $fp = fopen($postData, "r");
+
+                curl_setopt($curl, CURLOPT_VERBOSE, 1);
+                curl_setopt($curl, CURLOPT_USERPWD, 'user:password');
+                curl_setopt($curl, CURLOPT_URL, $url);
+                curl_setopt($curl, CURLOPT_UPLOAD, true);
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
+                curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-Type: application/json"));
+                curl_setopt($curl, CURLOPT_INFILE, $fp);
+                curl_setopt($curl, CURLOPT_INFILESIZE, filesize($postData));
+            } else {
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_POSTFIELDS, $postData);
+            }
         } else if ($method == self::$PUT) {
             if (file_exists($postData)) {
 
@@ -143,8 +162,7 @@ class APIClient {
                 curl_setopt($curl, CURLOPT_INFILE, $fp);
                 curl_setopt($curl, CURLOPT_INFILESIZE, filesize($postData));
             } else {
-                $json_data = json_encode($postData);
-                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
                 curl_setopt($curl, CURLOPT_POSTFIELDS, $postData);
             }
         } else if ($method == self::$DELETE) {
@@ -159,7 +177,7 @@ class APIClient {
         // Make the request
         $response = curl_exec($curl);
         $response_info = curl_getinfo($curl);
-
+	
         // Handle the response
         if ($response_info['http_code'] == 0) {
             throw new Exception("TIMEOUT: api call to " . $url .
@@ -173,10 +191,10 @@ class APIClient {
         } else if ($response_info['http_code'] == 404) {
             $data = null;
         } else {
-            /* throw new Exception("Can't connect to the api: " . $url .
+            throw new Exception("Can't connect to the api: " . $url .
               " response code: " .
-              $response_info['http_code']); */
-            echo "response code: " . $response_info['http_code'];
+              $response_info['http_code']);
+	    //echo "response code: " . $response_info['http_code'];
         }
 
         return $data;
@@ -308,7 +326,7 @@ class APIClient {
         return $instance;
     }
     
-    public function isJson($string) {
+    public static function isJson($string) {
         return is_string($string) && is_object(json_decode($string)) && (json_last_error() == JSON_ERROR_NONE) ? true : false;
     }
 

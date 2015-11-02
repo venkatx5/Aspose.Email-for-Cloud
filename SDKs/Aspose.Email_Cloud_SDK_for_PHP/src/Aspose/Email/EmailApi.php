@@ -20,7 +20,7 @@ class EmailApi {
 
      * folder, string: Folder path. (optional)
 
-     * @return ResponseMessage
+     * @return EmailDocument
      */
     public function GetDocument($name, $storage = null, $folder = null) {
         // verify required params are set
@@ -65,7 +65,7 @@ class EmailApi {
             return null;
         }
 
-        $responseObject = $this->apiClient->deserialize($response, 'ResponseMessage');
+        $responseObject = $this->apiClient->deserialize($response, 'EmailDocument');
         return $responseObject;
     }
 
