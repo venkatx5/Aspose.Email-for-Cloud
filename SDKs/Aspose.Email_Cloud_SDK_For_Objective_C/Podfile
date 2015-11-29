@@ -1,0 +1,13 @@
+platform :ios, '7.0'
+
+target 'Aspose.Email_Cloud_SDK_For_Objective_C' do
+	pod 'AFNetworking', '~> 2.5.0'
+	pod 'JSONModel'
+	pod 'ISO8601', '~> 0.3'
+	pod 'AsposeStorageCloud'
+end
+
+target 'Aspose.Email_Cloud_SDK_For_Objective_CTests' do
+	pod 'JSONModel'
+	pod 'AsposeStorageCloud'
+end
