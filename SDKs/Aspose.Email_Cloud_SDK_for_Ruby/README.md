@@ -39,7 +39,7 @@ class EmailUsage
 end
 ```
 ## Unit Tests
-Aspose Email SDK includes a suite of unit tests within the [test](https://github.com/asposeemail/Aspose_Email_Cloud/blob/master/SDKs/Aspose.Email_Cloud_SDK_for_Ruby/test/email_tests.rb) subdirectory. These Unit Tests also serves as examples of how to use the Aspose OCR SDK.
+Aspose Email SDK includes a suite of unit tests within the [test](https://github.com/asposeemail/Aspose_Email_Cloud/blob/master/SDKs/Aspose.Email_Cloud_SDK_for_Ruby/test/email_tests.rb) subdirectory. These Unit Tests also serves as examples of how to use the Aspose Email SDK.
 
 ## Contact
 Your feedback is very important to us. Please email us all your queries and feedback at marketplace@aspose.com.
