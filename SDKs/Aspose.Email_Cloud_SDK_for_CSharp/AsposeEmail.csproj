@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8D7C1657-10D5-4319-B01A-1C2B18ED3F0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>Aspose.Email-Cloud</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AsposeEmail</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Storage-Cloud, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Aspose.Storage-Cloud.1.0.3\lib\Aspose.Storage-Cloud.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqBridge, Version=1.3.0.0, Culture=neutral, PublicKeyToken=c2b14eb747628076, processorArchitecture=MSIL">
+      <HintPath>packages\LinqBridge.1.3.0\lib\net20\LinqBridge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.8.0.2\lib\net20\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="compile.bat" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="email.cs" />
+    <Compile Include="src\Com\Aspose\Email\ApiException.cs" />
+    <Compile Include="src\Com\Aspose\Email\apiInvoker.cs" />
+    <Compile Include="src\Com\Aspose\Email\Api\EmailApi.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\EmailDocument.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\EmailDocumentResponse.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\EmailProperties.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\EmailProperty.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\EmailPropertyResponse.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\Link.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\ListFoldersResponse.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\ListResponse.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\MailServerFolder.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\MimeResponse.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\ResponseMessage.cs" />
+    <Compile Include="src\Com\Aspose\Email\Model\SaaSposeResponse.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
