@@ -16,8 +16,6 @@ namespace EmailTest
     public class TestEmailApi
     {
 
-        protected string APIKEY = "xxxxxx";
-        protected string APPSID = "xxxxxx";
         protected string BASEPATH = "http://api.aspose.com/v1.1";
         private TestContext testContextInstance;
 
