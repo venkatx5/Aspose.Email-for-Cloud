@@ -12,7 +12,7 @@ use File::Slurp;
 use AsposeEmailCloud::ApiClient;
 use AsposeEmailCloud::Configuration;
 
-my $VERSION = '1.00';
+my $VERSION = '1.01';
 
 sub new {
     my $class   = shift;

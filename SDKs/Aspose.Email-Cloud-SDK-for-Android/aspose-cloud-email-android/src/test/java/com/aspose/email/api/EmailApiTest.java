@@ -48,8 +48,8 @@ public class EmailApiTest {
 	@Before
 	public void setUp() {
 		
-	        emailApi = new EmailApi("http://api.aspose.com/v1.1",apiKey,appSID);
-		storageApi = new StorageApi("http://api.aspose.com/v1.1",apiKey,appSID);
+	        emailApi = new EmailApi("http://api.aspose.cloud/v1.1",apiKey,appSID);
+		storageApi = new StorageApi("http://api.aspose.cloud/v1.1",apiKey,appSID);
 		
 		try {
 			System.out.println(getClass().getResource("/email_test.eml").toURI());

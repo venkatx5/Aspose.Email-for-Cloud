@@ -33,12 +33,12 @@ lib/AsposeEmailCloud/Object/SecurityOptions.pm
 lib/AsposeEmailCloud/Object/StyleIdentifier.pm
 lib/AsposeEmailCloud/Object/TextEffect.pm
 lib/AsposeEmailCloud/Object/Underline.pm
+Makefile.PL
 MANIFEST
+META.json
+META.yml
 README
 t/01_email_api.t
 t/data/email_test.eml
 t/data/email_test2.eml
 t/data/README.TXT
-Makefile.PL
-META.yml
-META.json
