@@ -78,7 +78,7 @@ string BASEPATH = "http://api.aspose.cloud/v1.1";
 
 
 //Link link = new Link();
-//link.Href = "http://api.aspose.com/v1.1/pdf/";
+//link.Href = "http://api.aspose.cloud/v1.1/pdf/";
 //link.Rel = "self";
 //link.Title = "NewField";
 //link.Type = "link";
