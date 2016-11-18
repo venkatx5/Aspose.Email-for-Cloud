@@ -15,7 +15,7 @@ Directory | Description
 [.NET SDK](SDKs/Aspose.Email-Cloud-SDK-for-.NET) | Aspose.Email Cloud SDK for .NET.
 [Java SDK](SDKs/Aspose.Email-Cloud-SDK-for-Java) |  Aspose.Email Cloud SDK for Java.
 [PHP SDK](SDKs/Aspose.Email-Cloud-SDK-for-PHP) | Aspose.Email Cloud SDK for PHP.
-[PHP SDK](SDKs/Aspose.Email-Cloud-SDK-for-Ruby) | Aspose.Email Cloud SDK for Ruby
+[Ruby SDK](SDKs/Aspose.Email-Cloud-SDK-for-Ruby) | Aspose.Email Cloud SDK for Ruby
 [Python SDK](SDKs/Aspose.Email-Cloud-SDK-for-Python) | Aspose.Email Cloud SDK for Python.
 [Node.js SDK](SDKs/Aspose.Email-Cloud-SDK-for-NodeJS) | Aspose.Email Cloud SDK for Node.js.
 [Android SDK](SDKs/Aspose.Email-Cloud-SDK-for-Android) | Aspose.Email Cloud SDK for Android.
