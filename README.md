@@ -12,11 +12,13 @@ Aspose.Email for Cloud is implemented as a REST API. If you use SDK, it hides th
 
 Directory | Description
 --------- | -----------
+[.NET SDK](SDKs/Aspose.Email-Cloud-SDK-for-.NET) | Aspose.Email Cloud SDK for .NET.
 [Java SDK](SDKs/Aspose.Email-Cloud-SDK-for-Java) |  Aspose.Email Cloud SDK for Java.
-[Android SDK](SDKs/Aspose.Email-Cloud-SDK-for-Android) | Aspose.Email Cloud SDK for Android.
 [PHP SDK](SDKs/Aspose.Email-Cloud-SDK-for-PHP) | Aspose.Email Cloud SDK for PHP.
+[PHP SDK](SDKs/Asposdsdsdse.E mail-Cloud-SDK-for-PHP) | Aspose.Email Cloud SDK for PHPxsd
+
+[Android SDK](SDKs/Aspose.Email-Cloud-SDK-for-Android) | Aspose.Email Cloud SDK for Android.
 [Python SDK](SDKs/Aspose.Email-Cloud-SDK-for-Python) | Aspose.Email Cloud SDK for Python.
 [iOS SDK](SDKs/Aspose.Email-Cloud-SDK-for-Objective-C) | Aspose.Email Cloud SDK for Objective C (iOS).
 [Node.js SDK](SDKs/Aspose.Email-Cloud-SDK-for-NodeJS) | Aspose.Email Cloud SDK for Node.js.
-[.NET SDK](SDKs/Aspose.Email-Cloud-SDK-for-.NET) | Aspose.Email Cloud SDK for .NET.
 [Perl SDK](SDKs/Aspose.Email-Cloud-SDK-for-Perl) | Aspose.Email Cloud SDK for Perl.
