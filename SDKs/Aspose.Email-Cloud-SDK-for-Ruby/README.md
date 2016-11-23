@@ -2,7 +2,7 @@
 This SDK lets you use [Aspose Cloud Email APIs](http://www.aspose.com/cloud/email-api.aspx) in your Ruby web apps.
 
 ##How to use the SDK?
-The complete source code is available in this repository folder, you can either directly use it in your project or use Maven. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/emailcloud/Available+SDKs).
+The complete source code is available in this repository folder, you can either directly use it in your project or use RubyGems. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/emailcloud/Available+SDKs).
 
 ## Usage
 APIs of this SDK can be called as follows:
