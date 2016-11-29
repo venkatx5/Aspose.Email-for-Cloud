@@ -3,7 +3,7 @@
 namespace Aspose\Email;
 
 use Aspose\Email\ApiException as Exception;
-use Aspose\Email\ApiClient;
+use Aspose\Email\APIClient;
 
 class EmailApi {
 
