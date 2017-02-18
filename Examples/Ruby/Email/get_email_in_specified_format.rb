@@ -1,6 +1,6 @@
 require 'aspose_email_cloud'
 
-class EmailProperties
+class Email
 
   include AsposeEmailCloud
   include AsposeStorageCloud
@@ -16,15 +16,15 @@ class EmailProperties
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def get_email_property
+  # Get email in specified format
+  def get_email_in_specified_format
     file_name = "email_test.eml"
     upload_file(file_name)
 
-    property_name = "Body"
-    response = @email_api.get_email_property(property_name, file_name)
+    response = @email_api.get_document_with_format(file_name, "msg")
   end
 
 end
 
-emailProperties = EmailProperties.new()
-puts emailProperties.get_email_property
+email = Email.new()
+puts email.get_email_in_specified_format

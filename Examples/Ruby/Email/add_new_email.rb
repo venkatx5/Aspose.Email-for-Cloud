@@ -16,7 +16,8 @@ class Email
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def put_create_new_email
+  # Add new email.
+  def add_new_email
     file_name = "email_test2.eml"
     upload_file(file_name)
 
@@ -47,4 +48,4 @@ class Email
 end
 
 email = Email.new()
-puts email.put_create_new_email
+puts email.add_new_email

@@ -1,6 +1,6 @@
 require 'aspose_email_cloud'
 
-class Email
+class Attachment
 
   include AsposeEmailCloud
   include AsposeStorageCloud
@@ -16,14 +16,16 @@ class Email
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def get_document_with_format
-    file_name = "email_test.eml"
+  # Get email attachment by name.
+  def get_email_attachment_by_name
+    file_name = "email_test2.eml"
     upload_file(file_name)
+    attach_name = "README.TXT"
 
-    response = @email_api.get_document_with_format(file_name, "msg")
+    response = @email_api.get_email_attachment(file_name, attach_name)
   end
 
 end
 
-email = Email.new()
-puts email.get_document_with_format
+attachment = Attachment.new()
+puts attachment.get_email_attachment

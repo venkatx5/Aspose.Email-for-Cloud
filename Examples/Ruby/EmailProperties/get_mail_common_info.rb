@@ -16,18 +16,15 @@ class EmailProperties
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def put_set_email_property
+  # Get mail common info.
+  def get_mail_common_info
     file_name = "email_test.eml"
     upload_file(file_name)
-    property_name = "Subject"
-    email_property = EmailProperty.new
-    email_property.name = "Subject"
-    email_property.value = "This is a new subject"
 
-    response = @email_api.put_set_email_property(file_name, property_name, email_property)
+    response = @email_api.get_document(file_name)
   end
 
 end
 
 emailProperties = EmailProperties.new()
-puts emailProperties.put_set_email_property
+puts emailProperties.get_mail_common_info

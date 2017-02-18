@@ -16,7 +16,8 @@ class Attachment
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def post_add_email_attachment
+  # Add email attachment.
+  def add_email_attachment
     file_name = "email_test.eml"
     upload_file(file_name)
     attach_name = "README.TXT"
@@ -28,4 +29,4 @@ class Attachment
 end
 
 attachment = Attachment.new()
-puts attachment.post_add_email_attachment
+puts attachment.add_email_attachment

@@ -16,14 +16,19 @@ class EmailProperties
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def get_document
+  # Set document property.
+  def set_email_property
     file_name = "email_test.eml"
     upload_file(file_name)
+    property_name = "Subject"
+    email_property = EmailProperty.new
+    email_property.name = "Subject"
+    email_property.value = "This is a new subject"
 
-    response = @email_api.get_document(file_name)
+    response = @email_api.put_set_email_property(file_name, property_name, email_property)
   end
 
 end
 
 emailProperties = EmailProperties.new()
-puts emailProperties.get_document
+puts emailProperties.set_email_property

@@ -1,6 +1,6 @@
 require 'aspose_email_cloud'
 
-class Attachment
+class EmailProperties
 
   include AsposeEmailCloud
   include AsposeStorageCloud
@@ -16,15 +16,16 @@ class Attachment
     response = @storage_api.put_create(file_name, File.open("../data/" << file_name,"r") { |io| io.read } )
   end
 
-  def get_email_attachment
-    file_name = "email_test2.eml"
+  # Read document property by name.
+  def read_document_property_by_name
+    file_name = "email_test.eml"
     upload_file(file_name)
-    attach_name = "README.TXT"
 
-    response = @email_api.get_email_attachment(file_name, attach_name)
+    property_name = "Body"
+    response = @email_api.get_email_property(property_name, file_name)
   end
 
 end
 
-attachment = Attachment.new()
-puts attachment.get_email_attachment
+emailProperties = EmailProperties.new()
+puts emailProperties.read_document_property_by_name
