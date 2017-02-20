@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class EmailProperties
@@ -29,3 +30,4 @@ end
 
 emailProperties = EmailProperties.new()
 puts emailProperties.read_document_property_by_name
+#ExEnd:

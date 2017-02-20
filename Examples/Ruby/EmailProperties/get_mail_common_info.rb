@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class EmailProperties
@@ -28,3 +29,4 @@ end
 
 emailProperties = EmailProperties.new()
 puts emailProperties.get_mail_common_info
+#ExEnd:

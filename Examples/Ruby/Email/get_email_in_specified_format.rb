@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class Email
@@ -28,3 +29,4 @@ end
 
 email = Email.new()
 puts email.get_email_in_specified_format
+#ExEnd:
