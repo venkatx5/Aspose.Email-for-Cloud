@@ -43,7 +43,7 @@ my $response = $storageApi->PutCreate(Path => $name, file => $data_path.$name);
 $response = $emailApi->GetDocumentWithFormat(name=> $name, format=>$format);
 
 if($response->{'Status'} eq 'OK'){
-	#download converted email message from api response 
+	# Download converted email message from api response 
 	my $output_file = $out_path. $fileName . '.' . $format;
 	write_file($output_file, { binmode => ":raw" }, $response->{'Content'});
 }

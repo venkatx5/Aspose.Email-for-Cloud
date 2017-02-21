@@ -42,7 +42,7 @@ my $response = $storageApi->PutCreate(Path => $name, file => $data_path.$name);
 $response = $emailApi->GetEmailAttachment(name=> $name, attachName=>$attachName);
 
 if($response->{'Status'} eq 'OK'){
-	#download attachment from api response 
+	# Download attachment from api response 
 	my $output_file = $out_path. $attachName;
 	write_file($output_file, { binmode => ":raw" }, $response->{'Content'});
 }
