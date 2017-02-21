@@ -3,8 +3,8 @@ var fs = require('fs');
 var assert = require('assert');
 var StorageApi = require('asposestoragecloud');
 var EmailApi = require('asposeemailcloud');
-var configProps = require('../Data/config.json');
-var data_path = '../Data/';
+var configProps = require('../Config/config.json');
+var data_path = '../../../Data/';
 
 var AppSID = configProps.app_sid;
 var AppKey = configProps.api_key;
