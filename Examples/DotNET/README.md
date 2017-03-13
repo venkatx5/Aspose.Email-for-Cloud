@@ -1,4 +1,4 @@
-## Aspose.Email for Cloud .NET SDK Examples
+## Aspose.Email for Cloud - .NET SDK Examples
 
 This repository contains C# examples for [Aspose.Email for Cloud](http://www.aspose.com/products/email/cloud) which will help you learn Aspose.Email for Cloud and write your own applications.
 
