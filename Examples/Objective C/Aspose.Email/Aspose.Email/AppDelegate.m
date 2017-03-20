@@ -10,6 +10,7 @@
 #import "Attachment.h"
 #import "EmailProperty.h"
 #import "Email.h"
+#import "Utils.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //Get App key and App SID from https://cloud.aspose.com
+    [Utils setAppKeyAndAppSID];
     
     Attachment *attachment = [[Attachment alloc] init];
     [attachment getEmailAttachment];
