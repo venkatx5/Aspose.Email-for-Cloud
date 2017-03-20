@@ -1,6 +1,7 @@
 <?php
 
 use Aspose\Email\EmailApi;
+use Aspose\Email\AsposeApp;
 use Aspose\Storage\StorageApi;
 
 class EmailApiTest extends PHPUnit_Framework_TestCase {
@@ -9,8 +10,10 @@ class EmailApiTest extends PHPUnit_Framework_TestCase {
     protected $storageApi;
 
     protected function setUp() {
-	$this->email = new EmailApi();
-	$this->storageApi = new StorageApi();
+    	AsposeApp::$appSID = "";
+        AsposeApp::$apiKey = "";
+		$this->email = new EmailApi();
+		$this->storageApi = new StorageApi();
     }
 
     public function testGetDocument() {
