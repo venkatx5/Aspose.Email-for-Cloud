@@ -21,6 +21,7 @@
 }
 
 - (void)getDocumentWithFormat {
+//ExStart:GetDocumentWithFormat
     NSString *fileName = @"email_test.eml";
     [Utils uploadFile:fileName];
     
@@ -32,9 +33,11 @@
                                           completionHandler:^(NSURL *output, NSError *error) {
                                               NSLog(@"%@", output);
                                           }];
+//ExEnd:GetDocumentWithFormat
 }
 
 - (void)putCreateNewEmail {
+//ExStart:PutCreateNewEmail
     NSString *fileName = @"email_test2.eml";
     [Utils uploadFile:fileName];
     
@@ -66,6 +69,7 @@
                                       completionHandler:^(ASPEmailDocumentResponse *output, NSError *error) {
                                           NSLog(@"%@", output);
                                       }];
+//ExEnd:PutCreateNewEmail
 }
 
 @end

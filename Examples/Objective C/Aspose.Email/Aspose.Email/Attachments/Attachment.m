@@ -21,6 +21,7 @@
 }
 
 - (void)getEmailAttachment {
+//ExStart:GetEmailAttachment
     NSString *fileName = @"email_test2.eml";
     [Utils uploadFile:fileName];
     
@@ -31,9 +32,11 @@
                                        completionHandler:^(NSURL *output, NSError *error) {
                                            NSLog(@"%@", output);
                                        }];
+//ExEnd:GetEmailAttachment
 }
 
 - (void)postAddEmailAttachment {
+//ExStart:PostAddEmailAttachment
     NSString *fileName = @"email_test.eml";
     [Utils uploadFile:fileName];
     NSString *attachName = @"README.TXT";
@@ -46,6 +49,7 @@
                                            completionHandler:^(ASPEmailDocumentResponse *output, NSError *error) {
                                                NSLog(@"%@", output);
                                            }];
+//ExEnd:PostAddEmailAttachment
 }
 
 @end

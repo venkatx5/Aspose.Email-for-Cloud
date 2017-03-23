@@ -21,6 +21,7 @@
 }
 
 - (void)getDocument {
+//ExStart:GetDocument
     NSString *fileName = @"email_test.eml";
     [Utils uploadFile:fileName];
     
@@ -30,9 +31,11 @@
                                 completionHandler:^(NSURL *output, NSError *error) {
                                     NSLog(@"%@", output);
                                 }];
+//ExEnd:GetDocument
 }
 
 - (void)getEmailProperty {
+//ExStart:GetEmailProperty
     NSString *fileName = @"email_test.eml";
     [Utils uploadFile:fileName];
     
@@ -43,9 +46,11 @@
                                      completionHandler:^(ASPEmailPropertyResponse *output, NSError *error) {
                                          NSLog(@"%@", output);
                                      }];
+//ExEnd:GetEmailProperty
 }
 
 - (void)putSetEmailProperty {
+//ExStart:PutSetEmailProperty
     
     NSString *fileName = @"email_test.eml";
     [Utils uploadFile:fileName];
@@ -62,6 +67,7 @@
                                         completionHandler:^(ASPEmailPropertyResponse *output, NSError *error) {
                                             NSLog(@"%@", output);
                                         }];
+//ExEnd:PutSetEmailProperty
 }
 
 @end
