@@ -13,7 +13,7 @@
 
 + (void) setAppKeyAndAppSID {
     //Get App key and App SID from https://cloud.aspose.com
-    [ASPApiClient setAppKey:@"" andAppSID:@""];
+    [ASPApiClient setAppKey:@"App Key" andAppSID:@"App SID"];
 }
 
 + (void)uploadFile:(NSString *) fileName {

@@ -23,7 +23,7 @@
 - (void)getEmailAttachment {
 //ExStart:GetEmailAttachment
     NSString *fileName = @"email_test2.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
     [self.emailApi getEmailAttachmentWithCompletionBlock:fileName
                                               attachName:@"README.TXT"
@@ -38,9 +38,9 @@
 - (void)postAddEmailAttachment {
 //ExStart:PostAddEmailAttachment
     NSString *fileName = @"email_test.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     NSString *attachName = @"README.TXT";
-    [Utils uploadFile:attachName];
+    //[Utils uploadFile:attachName];
     
     [self.emailApi postAddEmailAttachmentWithCompletionBlock:fileName
                                                   attachName:attachName

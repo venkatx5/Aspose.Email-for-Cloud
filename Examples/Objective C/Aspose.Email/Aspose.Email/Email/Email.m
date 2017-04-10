@@ -23,9 +23,9 @@
 - (void)getDocumentWithFormat {
 //ExStart:GetDocumentWithFormat
     NSString *fileName = @"email_test.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
-    [self.emailApi getDocumentWithFormatWithCompletionBlock:fileName
+   [self.emailApi getDocumentWithFormatWithCompletionBlock:fileName
                                                      format:@"msg"
                                                     outPath:nil
                                                     storage:nil
@@ -39,7 +39,7 @@
 - (void)putCreateNewEmail {
 //ExStart:PutCreateNewEmail
     NSString *fileName = @"email_test2.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
     ASPEmailDocumentWithStringValue *emailDocument = [[ASPEmailDocumentWithStringValue alloc] init];
     

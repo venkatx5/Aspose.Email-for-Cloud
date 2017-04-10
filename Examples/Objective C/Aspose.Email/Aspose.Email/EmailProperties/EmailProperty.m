@@ -23,7 +23,7 @@
 - (void)getDocument {
 //ExStart:GetDocument
     NSString *fileName = @"email_test.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
     [self.emailApi getDocumentWithCompletionBlock:fileName
                                           storage:nil
@@ -37,7 +37,7 @@
 - (void)getEmailProperty {
 //ExStart:GetEmailProperty
     NSString *fileName = @"email_test.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
     [self.emailApi getEmailPropertyWithCompletionBlock:@"Subject"
                                                   name:fileName
@@ -53,7 +53,7 @@
 //ExStart:PutSetEmailProperty
     
     NSString *fileName = @"email_test.eml";
-    [Utils uploadFile:fileName];
+    //[Utils uploadFile:fileName];
     
     ASPEmailPropertyWithStringValue *emailProperty = [[ASPEmailPropertyWithStringValue alloc] init];
     emailProperty.name = @"Subject";
