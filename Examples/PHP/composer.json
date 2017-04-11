@@ -1,0 +1,5 @@
+{
+	"require": {
+    	"aspose/email-sdk-php": "dev-master"
+    }
+}

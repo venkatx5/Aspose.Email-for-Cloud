@@ -103,7 +103,7 @@ namespace EmailTest
         //    string folder = null;
         //    bool? markAsSent = null;
         //    string body = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.AppendMimeMessage(storage, accountName1, accountName2, folder, markAsSent, body);
         //    Assert.AreEqual("200", actual.Code);
@@ -125,7 +125,7 @@ namespace EmailTest
         //    string accountName2 = null;
         //    string parentFolder = null;
         //    string name = null;
-        //    storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.CreateFolder(storage, accountName1, accountName2, parentFolder, name);
         //    Assert.AreEqual("200", actual.Code);
@@ -147,7 +147,7 @@ namespace EmailTest
         //    string accountName2 = null;
         //    string folder = null;
         //    bool? deletePermanently = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.DeleteFolder(storage, accountName1, accountName2, folder, deletePermanently);
         //    Assert.AreEqual("200", actual.Code);
@@ -169,7 +169,7 @@ namespace EmailTest
         //    string accountName2 = null;
         //    string messageId = null;
         //    bool? deletePermanently = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.DeleteMessage(storage, accountName1, accountName2, messageId, deletePermanently);
         //    Assert.AreEqual("200", actual.Code);
@@ -190,7 +190,7 @@ namespace EmailTest
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string messageId = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    MimeResponse actual;
         //    actual = target.FetchMessage(storage, accountName1, accountName2, messageId);
         //    Assert.AreEqual("200", actual.Code);
@@ -210,7 +210,7 @@ namespace EmailTest
             string storage = null;
             string folder = null;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name));
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name));
 
             EmailDocument actual;
             actual = target.GetDocument(name, storage, folder);
@@ -234,7 +234,7 @@ namespace EmailTest
             string folder = null;
             string outPath = null;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             
             ResponseMessage actual;
             actual = target.GetDocumentWithFormat(name, format, storage, folder, outPath);
@@ -257,7 +257,7 @@ namespace EmailTest
             string storage = null;
             string folder = null;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             
             ResponseMessage actual;
             actual = target.GetEmailAttachment(name, attachName, storage, folder);
@@ -280,7 +280,7 @@ namespace EmailTest
             string storage = null;
             string folder = null;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name));
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name));
 
             EmailPropertyResponse actual;
             actual = target.GetEmailProperty(propertyName, name, storage, folder);
@@ -298,12 +298,12 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string parentFolder = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    ListFoldersResponse actual;
         //    actual = target.ListFolders(storage, accountName1, accountName2, parentFolder);
         //    Assert.AreEqual("200", actual.Code);
@@ -319,14 +319,14 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string folder = null;
         //    bool? recursive = null;
         //    string queryString = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    ListResponse actual;
         //    actual = target.ListMessages(storage, accountName1, accountName2, folder, recursive, queryString);
         //    Assert.AreEqual("200", actual.Code);
@@ -347,7 +347,7 @@ namespace EmailTest
             string storage = null;
             string folder = null;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             
             EmailDocumentResponse actual;
             actual = target.PostAddEmailAttachment(name, attachName, storage, folder);
@@ -411,7 +411,7 @@ namespace EmailTest
             body.DocumentProperties = emailProperties;
             body.Links = links;
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             
             EmailDocumentResponse actual;
             actual = target.PutCreateNewEmail(name, storage, folder, body);
@@ -437,7 +437,7 @@ namespace EmailTest
             body.Name = "Subject";
             body.Value = "This is the subject";
             
-            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+            storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             
             EmailPropertyResponse actual;
             actual = target.PutSetEmailProperty(name, propertyName, storage, folder, body);
@@ -455,7 +455,7 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName = null;
         //    string host = null;
@@ -465,7 +465,7 @@ namespace EmailTest
         //    string securityOptions = null;
         //    string protocolType = null;
         //    string description = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.SaveMailAccount(storage, accountName, host, port, login, password, securityOptions, protocolType, description);
         //    Assert.AreEqual("200", actual.Code);
@@ -481,7 +481,7 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName = null;
         //    string host = null;
@@ -493,7 +493,7 @@ namespace EmailTest
         //    string securityOptions = null;
         //    string protocolType = null;
         //    string description = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.SaveMailOAuthAccount(storage, accountName, host, port, login, clientId, clientSecret, refreshToken, securityOptions, protocolType, description);
         //    Assert.AreEqual("200", actual.Code);
@@ -509,12 +509,12 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string mailPath = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.Send(storage, accountName1, accountName2, mailPath);
         //    Assert.AreEqual("200", actual.Code);
@@ -530,12 +530,12 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string body = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.SendMime(storage, accountName1, accountName2, body);
         //    Assert.AreEqual("200", actual.Code);
@@ -551,13 +551,13 @@ namespace EmailTest
         //    EmailApi target = new EmailApi(APIKEY, APPSID, BASEPATH);
         //    StorageApi storageApi = new StorageApi(APIKEY, APPSID, BASEPATH);
             
-        //   // storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //   // storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    string storage = null;
         //    string accountName1 = null;
         //    string accountName2 = null;
         //    string messageId = null;
         //    bool? isRead = null;
-        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\email\\resources\\" + name)); 
+        //    //storageApi.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
         //    SaaSposeResponse actual;
         //    actual = target.SetReadFlag(storage, accountName1, accountName2, messageId, isRead);
         //    Assert.AreEqual("200", actual.Code);

@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class EmailProperties
@@ -32,3 +33,4 @@ end
 
 emailProperties = EmailProperties.new()
 puts emailProperties.set_email_property
+#ExEnd:

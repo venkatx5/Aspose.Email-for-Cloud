@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class Email
@@ -49,3 +50,4 @@ end
 
 email = Email.new()
 puts email.add_new_email
+#ExEnd:

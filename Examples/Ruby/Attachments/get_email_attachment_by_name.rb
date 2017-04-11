@@ -1,3 +1,4 @@
+#ExStart:
 require 'aspose_email_cloud'
 
 class Attachment
@@ -29,3 +30,4 @@ end
 
 attachment = Attachment.new()
 puts attachment.get_email_attachment
+#ExEnd:
