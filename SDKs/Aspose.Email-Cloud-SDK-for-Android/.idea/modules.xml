@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aspose-Email-Cloud-SDK-for-Android/Aspose-Email-Cloud-SDK-for-Android.iml" filepath="$PROJECT_DIR$/Aspose-Email-Cloud-SDK-for-Android/Aspose-Email-Cloud-SDK-for-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/Aspose.Email-Cloud-SDK-for-Android.iml" filepath="$PROJECT_DIR$/Aspose.Email-Cloud-SDK-for-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aspose.Storage-Cloud-SDK-for-Android/Aspose.Storage-Cloud-SDK-for-Android.iml" filepath="$PROJECT_DIR$/Aspose.Storage-Cloud-SDK-for-Android/Aspose.Storage-Cloud-SDK-for-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/aspose-cloud-email-android/aspose-cloud-email-android.iml" filepath="$PROJECT_DIR$/aspose-cloud-email-android/aspose-cloud-email-android.iml" />
     </modules>
   </component>
 </project>
