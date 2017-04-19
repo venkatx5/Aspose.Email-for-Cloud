@@ -423,9 +423,363 @@ module AsposeEmailCloud
       end
       return result
     end
+    
+    # Save mail account.
+    #
+    # @param storage.
+    # @param account_name.
+    # @param host.
+    # @param port.
+    # @param login.
+    # @param password.
+    # @param security_options.
+    # @param protocol_type.
+    # @param description.
+    # @return [BaseResponse]
+    def post_save_mail_account(storage, account_name, host, port, login, password, security_options, protocol_type, description)
+        if Configuration.debugging
+            Configuration.logger.debug "Calling API: EmailApi#post_save_mail_account ..."
+        end
+        
+        # verify the required parameter 'storage' is set
+        fail "Missing the required parameter 'storage' when calling post_save_mail_account" if storage.nil?
+        
+        # verify the required parameter 'account_name' is set
+        fail "Missing the required parameter 'account_name' when calling post_save_mail_account" if account_name.nil?
+        
+        # verify the required parameter 'host' is set
+        fail "Missing the required parameter 'host' when calling post_save_mail_account" if host.nil?
+        
+        # verify the required parameter 'port' is set
+        fail "Missing the required parameter 'port' when calling post_save_mail_account" if port.nil?
+        
+        # verify the required parameter 'login' is set
+        fail "Missing the required parameter 'login' when calling post_save_mail_account" if login.nil?
+        
+        # verify the required parameter 'password' is set
+        fail "Missing the required parameter 'password' when calling post_save_mail_account" if password.nil?
+        
+        # verify the required parameter 'security_options' is set
+        fail "Missing the required parameter 'security_options' when calling post_save_mail_account" if security_options.nil?
+        
+        # verify the required parameter 'protocol_type' is set
+        fail "Missing the required parameter 'protocol_type' when calling post_save_mail_account" if protocol_type.nil?
+        
+        # verify the required parameter 'description' is set
+        fail "Missing the required parameter 'description' when calling post_save_mail_account" if description.nil?
+        
+        # resource path
+        path = "/email/client/SaveMailAccount"
+        
+        # query parameters
+        query_params = {}
+        query_params[:'storage'] = storage
+        query_params[:'accountName'] = account_name
+        query_params[:'host'] = host
+        query_params[:'port'] = port
+        query_params[:'login'] = login
+        query_params[:'password'] = password
+        query_params[:'securityOptions'] = security_options
+        query_params[:'protocolType'] = protocol_type
+        query_params[:'description'] = description
+        
+        # header parameters
+        header_params = {}
+        
+        # HTTP header 'Accept' (if needed)
+        _header_accept = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript']
+        _header_accept_result = @api_client.select_header_accept(_header_accept) and header_params['Accept'] = _header_accept_result
+        
+        # HTTP header 'Content-Type'
+        _header_content_type = []
+        header_params['Content-Type'] = @api_client.select_header_content_type(_header_content_type)
+        
+        # form parameters
+        form_params = {}
+        
+        # http body (model)
+        post_body = nil
+        
+        
+        auth_names = []
+        result = @api_client.call_api(:POST, path,
+                                      :header_params => header_params,
+                                      :query_params => query_params,
+                                      :form_params => form_params,
+                                      :body => post_body,
+                                      :auth_names => auth_names,
+                                      :return_type => 'BaseResponse')
+                                      if Configuration.debugging
+                                          Configuration.logger.debug "API called: EmailApi#post_save_mail_account. Result: #{result.inspect}"
+                                      end
+                                      return result
+    end
+
+    # Save mail oauth account.
+    #
+    # @param storage.
+    # @param account_name.
+    # @param host.
+    # @param port.
+    # @param login.
+    # @param client_id.
+    # @param client_secret.
+    # @param refresh_token.
+    # @param security_options.
+    # @param protocol_type.
+    # @param description.
+    # @return [BaseResponse]
+    def post_save_mail_oauth_account(storage, account_name, host, port, login, client_id, client_secret, refresh_token, security_options, protocol_type, description)
+        if Configuration.debugging
+            Configuration.logger.debug "Calling API: EmailApi#post_save_mail_oauth_account ..."
+        end
+        
+        # verify the required parameter 'storage' is set
+        fail "Missing the required parameter 'storage' when calling post_save_mail_oauth_account" if storage.nil?
+        
+        # verify the required parameter 'account_name' is set
+        fail "Missing the required parameter 'account_name' when calling post_save_mail_oauth_account" if account_name.nil?
+        
+        # verify the required parameter 'host' is set
+        fail "Missing the required parameter 'host' when calling post_save_mail_oauth_account" if host.nil?
+        
+        # verify the required parameter 'port' is set
+        fail "Missing the required parameter 'port' when calling post_save_mail_oauth_account" if port.nil?
+        
+        # verify the required parameter 'login' is set
+        fail "Missing the required parameter 'login' when calling post_save_mail_oauth_account" if login.nil?
+        
+        # verify the required parameter 'client_id' is set
+        fail "Missing the required parameter 'client_id' when calling post_save_mail_oauth_account" if client_id.nil?
+        
+        # verify the required parameter 'client_secret' is set
+        fail "Missing the required parameter 'client_secret' when calling post_save_mail_oauth_account" if client_secret.nil?
+
+        # verify the required parameter 'refresh_token' is set
+        fail "Missing the required parameter 'refresh_token' when calling post_save_mail_oauth_account" if refresh_token.nil?
+
+        # verify the required parameter 'security_options' is set
+        fail "Missing the required parameter 'security_options' when calling post_save_mail_oauth_account" if security_options.nil?
+        
+        # verify the required parameter 'protocol_type' is set
+        fail "Missing the required parameter 'protocol_type' when calling post_save_mail_oauth_account" if protocol_type.nil?
+        
+        # verify the required parameter 'description' is set
+        fail "Missing the required parameter 'description' when calling post_save_mail_oauth_account" if description.nil?
+        
+        # resource path
+        path = "/email/client/SaveMailOAuthAccount"
+        
+        # query parameters
+        query_params = {}
+        query_params[:'storage'] = storage
+        query_params[:'accountName'] = account_name
+        query_params[:'host'] = host
+        query_params[:'port'] = port
+        query_params[:'login'] = login
+        query_params[:'clientId'] = client_id
+        query_params[:'clientSecret'] = client_secret
+        query_params[:'refreshToken'] = refresh_token
+        query_params[:'securityOptions'] = security_options
+        query_params[:'protocolType'] = protocol_type
+        query_params[:'description'] = description
+        
+        # header parameters
+        header_params = {}
+        
+        # HTTP header 'Accept' (if needed)
+        _header_accept = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript']
+        _header_accept_result = @api_client.select_header_accept(_header_accept) and header_params['Accept'] = _header_accept_result
+        
+        # HTTP header 'Content-Type'
+        _header_content_type = []
+        header_params['Content-Type'] = @api_client.select_header_content_type(_header_content_type)
+        
+        # form parameters
+        form_params = {}
+        
+        # http body (model)
+        post_body = nil
+        
+        
+        auth_names = []
+        result = @api_client.call_api(:POST, path,
+                                      :header_params => header_params,
+                                      :query_params => query_params,
+                                      :form_params => form_params,
+                                      :body => post_body,
+                                      :auth_names => auth_names,
+                                      :return_type => 'BaseResponse')
+                                      if Configuration.debugging
+                                          Configuration.logger.debug "API called: EmailApi#post_save_mail_oauth_account. Result: #{result.inspect}"
+                                      end
+                                      return result
+    end
+
+    # Send.
+    # 
+    # @option storage.
+    # @option accountName1.
+    # @option accountName2.
+    # @option mailPath.
+    # @return [BaseResponse]
+    def post_send(opts = {})
+      if Configuration.debugging
+        Configuration.logger.debug "Calling API: EmailApi#post_send ..."
+      end
+      
+      # resource path
+      path = "/email/client/Send"
+
+      # query parameters
+      query_params = {}
+      query_params[:'storage'] = opts[:'storage'] if opts[:'storage']
+      query_params[:'accountName1'] = opts[:'account_name_1'] if opts[:'account_name_1']
+      query_params[:'accountName2'] = opts[:'account_name_2'] if opts[:'account_name_2']
+      query_params[:'mailPath'] = opts[:'mail_path'] if opts[:'mail_path']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      _header_accept = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript']
+      _header_accept_result = @api_client.select_header_accept(_header_accept) and header_params['Accept'] = _header_accept_result
+
+      # HTTP header 'Content-Type'
+      _header_content_type = []
+      header_params['Content-Type'] = @api_client.select_header_content_type(_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+
+      auth_names = []
+      result = @api_client.call_api(:POST, path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BaseResponse')
+      if Configuration.debugging
+        Configuration.logger.debug "API called: EmailApi#post_send. Result: #{result.inspect}"
+      end
+      return result
+    end
+
+    # Send Mime.
+    # 
+    # @option storage.
+    # @option accountName1.
+    # @option accountName2.
+    # @option base64MimeMessage.
+    # @return [BaseResponse]
+    def post_send_mime(opts = {})
+      if Configuration.debugging
+        Configuration.logger.debug "Calling API: EmailApi#post_send_mime ..."
+      end
+      
+      # resource path
+      path = "/email/client/SendMime"
+
+      # query parameters
+      query_params = {}
+      query_params[:'storage'] = opts[:'storage'] if opts[:'storage']
+      query_params[:'accountName1'] = opts[:'account_name_1'] if opts[:'account_name_1']
+      query_params[:'accountName2'] = opts[:'account_name_2'] if opts[:'account_name_2']
+      query_params[:'base64MimeMessage'] = opts[:'base_64_mime_message'] if opts[:'base_64_mime_message']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      _header_accept = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript']
+      _header_accept_result = @api_client.select_header_accept(_header_accept) and header_params['Accept'] = _header_accept_result
+
+      # HTTP header 'Content-Type'
+      _header_content_type = []
+      header_params['Content-Type'] = @api_client.select_header_content_type(_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+
+      auth_names = []
+      result = @api_client.call_api(:POST, path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BaseResponse')
+      if Configuration.debugging
+        Configuration.logger.debug "API called: EmailApi#post_send_mime. Result: #{result.inspect}"
+      end
+      return result
+    end
+
+    # Append message.
+    #
+    # @option opts [String] :storage
+    # @option opts [String] :accountName1
+    # @option opts [String] :accountName2
+    # @option opts [String] :folder
+    # @option opts [String] :mailPath
+    # @option opts [boolean] :markAsSent
+    # @return [BaseResponse]
+    def put_append_message(opts = {})
+      if Configuration.debugging
+        Configuration.logger.debug "Calling API: EmailApi#put_append_message ..."
+      end
+      
+      # resource path
+      path = "/email/client/Append"
+
+      # query parameters
+      query_params = {}
+      query_params[:'storage'] = opts[:'storage'] if opts[:'storage']
+      query_params[:'accountName1'] = opts[:'account_name_1'] if opts[:'account_name_1']
+      query_params[:'accountName2'] = opts[:'account_name_2'] if opts[:'account_name_2']
+      query_params[:'folder'] = opts[:'folder'] if opts[:'folder']
+      query_params[:'mailPath'] = opts[:'mail_path'] if opts[:'mail_path']
+      query_params[:'markAsSent'] = opts[:'mark_as_sent'] if opts[:'mark_as_sent']
+
+      # header parameters
+      header_params = {}
+
+      # HTTP header 'Accept' (if needed)
+      _header_accept = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript']
+      _header_accept_result = @api_client.select_header_accept(_header_accept) and header_params['Accept'] = _header_accept_result
+
+      # HTTP header 'Content-Type'
+      _header_content_type = ['application/json', 'text/json', 'application/xml', 'text/xml', 'text/javascript', 'application/x-www-form-urlencoded']
+      header_params['Content-Type'] = @api_client.select_header_content_type(_header_content_type)
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      
+      auth_names = []
+      result = @api_client.call_api(:PUT, path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'BaseResponse')
+      if Configuration.debugging
+        Configuration.logger.debug "API called: EmailApi#put_append_message. Result: #{result.inspect}"
+      end
+      return result
+    end
+
   end
 end
-
-
-
-

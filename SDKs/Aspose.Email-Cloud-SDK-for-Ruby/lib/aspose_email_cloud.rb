@@ -8,6 +8,7 @@ require_relative 'aspose_email_cloud/configuration'
 
 # Models
 require_relative 'aspose_email_cloud/models/base_object'
+require_relative 'aspose_email_cloud/models/base_response'
 require_relative 'aspose_email_cloud/models/email_document'
 require_relative 'aspose_email_cloud/models/email_properties'
 require_relative 'aspose_email_cloud/models/stream'

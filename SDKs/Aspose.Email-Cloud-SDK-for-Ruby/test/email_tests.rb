@@ -10,7 +10,7 @@ class EmailTests < Minitest::Test
 	
 	def setup
         #Get App key and App SID from https://cloud.aspose.com
-        AsposeApp.app_key_and_sid("", "")
+        AsposeApp.app_key_and_sid("App Key", "App SID")
 		@email_api = EmailApi.new
 	end
 
@@ -107,5 +107,70 @@ class EmailTests < Minitest::Test
         response = @email_api.put_set_email_property(file_name, property_name, email_property)
      	assert(response, message="Failed to set document property.")
     end
+
+    def test_post_save_mail_account
+        storage = "Aspose for Cloud Default Storage"
+        account_name = "muhammad.sohail@aspose.com"
+        host = "exchange.aspose.com"
+        port = 587
+        login = "muhammad.sohail"
+        password = "password"
+        security_options = "Auto"
+        protocol_type = "IMAP"
+        description = "exchange.aspose.com"
+
+        response = @email_api.post_save_mail_account(storage, account_name, host, port, login, password, security_options, protocol_type, description)
+        assert(response, message="Failed to save mail account.")
+    end
+
+    def test_post_save_mail_oauth_account
+        storage = "Aspose for Cloud Default Storage"
+        account_name = "muhammad.sohail@aspose.com"
+        host = "exchange.aspose.com"
+        port = 587
+        login = "muhammad.sohail"
+        client_id = "12345678"
+        client_secret = "12345678"
+        refresh_token = "12345678"
+        security_options = "Auto"
+        protocol_type = "IMAP"
+        description = "exchange.aspose.com"
+
+        response = @email_api.post_save_mail_oauth_account(storage, account_name, host, port, login, client_id, client_secret, refresh_token, security_options, protocol_type, description)
+        assert(response, message="Failed to save mail oauth account.")
+    end 
     
+    def test_post_send
+        storage = "Aspose for Cloud Default Storage"
+        account_name_1 = "muhammad.sohail@aspose.com"
+        account_name_2 = "msohailismail@gmail.com"
+        mail_path = "Email Text"
+
+        response = @email_api.post_send({storage: storage, account_name_1: account_name_1, account_name_2: account_name_2, mail_path: mail_path})
+        puts response
+        assert(response, message="Failed to send email.")
+    end
+
+    def test_post_send_mime
+        storage = "Aspose for Cloud Default Storage"
+        account_name_1 = "muhammad.sohail@aspose.com"
+        account_name_2 = "msohailismail@gmail.com"
+        base_64_mime_message = "bXkgbWVzc2FnZQ=="
+
+        response = @email_api.post_send_mime({storage: storage, account_name_1: account_name_1, account_name_2: account_name_2, base_64_mime_message: base_64_mime_message})
+        puts response
+        assert(response, message="Failed to send mime.")
+    end
+
+    def test_put_append_message
+        storage = "Aspose for Cloud Default Storage"
+        account_name_1 = "muhammad.sohail@aspose.com"
+        account_name_2 = "msohailismail@gmail.com"
+        mail_path = "Email Text"
+        mark_as_sent = true
+
+        response = @email_api.put_append_message({storage: storage, account_name_1: account_name_1, account_name_2: account_name_2, mail_path: mail_path, mark_as_sent: mark_as_sent})
+        puts response
+        assert(response, message="Failed to append message.")
+    end 
 end
