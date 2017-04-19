@@ -41,7 +41,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
         try:
             name =  "email_test.eml"
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.GetDocument(name)            
 
             self.assertIsInstance(response,EmailDocument.EmailDocument)
@@ -60,7 +60,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
             name =  "email_test.eml"
             format = "msg"
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.GetDocumentWithFormat(name, format)
             
             self.assertEqual(response.Status,'OK')
@@ -77,7 +77,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
             name =  "email_test2.eml"
             attachName = "README.TXT"
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.GetEmailAttachment(name, attachName)            
 
             self.assertEqual(response.Status,'OK')
@@ -94,7 +94,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
             name =  "email_test.eml"
             propertyName = "Body"
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.GetEmailProperty(propertyName, name)            
 
             self.assertIsInstance(response,EmailPropertyResponse.EmailPropertyResponse)
@@ -112,8 +112,8 @@ class TestAsposeEmailCloud(unittest.TestCase):
             name =  "email_test.eml"
             attachName = "README.TXT"
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
-            response = self.storageApi.PutCreate(attachName,'./data/' + attachName)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
+            response = self.storageApi.PutCreate(attachName,'../../../Data/' + attachName)
             
             response = self.emailApi.PostAddEmailAttachment(name, attachName)            
 
@@ -152,7 +152,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
             body.DocumentProperties = emailProps
             body.Format = "eml" 
             
-            #response = self.storageApi.PutCreate(name,'./data/' + name)
+            #response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.PutCreateNewEmail(name, body)            
 
             self.assertIsInstance(response,EmailDocumentResponse.EmailDocumentResponse)
@@ -175,7 +175,7 @@ class TestAsposeEmailCloud(unittest.TestCase):
             body.Value = "This is a new subject"
             
             
-            response = self.storageApi.PutCreate(name,'./data/' + name)
+            response = self.storageApi.PutCreate(name,'../../../Data/' + name)
             response = self.emailApi.PutSetEmailProperty(name, propertyName, body)            
 
             self.assertIsInstance(response,EmailPropertyResponse.EmailPropertyResponse)

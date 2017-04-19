@@ -1,11 +1,11 @@
 package com.aspose.email.api;
 
 import static org.junit.Assert.assertNull;
+
 import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -44,16 +44,6 @@ public class EmailApiTest {
 	@AfterClass
 	public static void tearDownClass() {
 	}
-	
-	private static Path getPath(Class example, String filename) {
-		final File f = new File(example.getProtectionDomain().getCodeSource().getLocation().getPath());
-		String path = f.getAbsolutePath();
-		int subPathIndex = path.indexOf("Examples");
-		String subPath = path.substring(0, subPathIndex) + "Data/" + filename;
-
-		Path p = Paths.get(subPath);
-		return p;
-	}
 
 	@Before
 	public void setUp() {
@@ -62,10 +52,10 @@ public class EmailApiTest {
 		storageApi = new StorageApi("http://api.aspose.cloud/v1.1",apiKey,appSID);
 		
 		try {
-			
-			storageApi.PutCreate("email_test.eml", "", "", getPath(EmailApiTest.class, "email_test.eml").toFile());
-	                storageApi.PutCreate("email_test_attach.eml", "", "", getPath(EmailApiTest.class, "email_test_attach.eml").toFile());
-		} catch (Exception uriExp) {
+			System.out.println(getClass().getResource("/email_test.eml").toURI());
+			storageApi.PutCreate("email_test.eml", "", "", new File(getClass().getResource("/email_test.eml").toURI()));
+	                storageApi.PutCreate("email_test_attach.eml", "", "", new File(getClass().getResource("/email_test_attach.eml").toURI()));
+		} catch (java.net.URISyntaxException uriExp) {
 			System.out.println("uriExp:" + uriExp);
 		}
 
