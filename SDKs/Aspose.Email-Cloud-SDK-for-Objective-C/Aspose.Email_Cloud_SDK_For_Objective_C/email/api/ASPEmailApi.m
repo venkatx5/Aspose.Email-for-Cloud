@@ -842,6 +842,116 @@
           ];
 }
 
+    ///
+    /// Save mail account.
+    ///
+    /// @param storage.
+    /// @param account_name.
+    /// @param host.
+    /// @param port.
+    /// @param login.
+    /// @param password.
+    /// @param security_options.
+    /// @param protocol_type.
+    /// @param description.
+    ///
+    /// @return BaseResponse*
+-(NSNumber*) postSaveMailAccountWithCompletionBlock: (NSString*) storage
+                                            accountName: (NSString*) accountName
+                                               host: (NSString*) host
+                                                port: (NSString*) port
 
+                                     completionHandler: (void (^)(ASPEmailDocumentResponse* output, NSError* error))completionBlock {
+    
+    
+    
+    // verify the required parameter 'name' is set
+    if (name == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `name` when calling `postAddEmailAttachment`"];
+    }
+    
+    // verify the required parameter 'attachName' is set
+    if (attachName == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `attachName` when calling `postAddEmailAttachment`"];
+    }
+    
+    
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/email/{name}/attachments/{attachName}"];
+    
+    // remove format in URL if needed
+    if ([resourcePath rangeOfString:@".{format}"].location != NSNotFound) {
+        [resourcePath replaceCharactersInRange: [resourcePath rangeOfString:@".{format}"] withString:@".json"];
+    }
+    
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (name != nil) {
+        pathParams[@"name"] = name;
+    }
+    if (attachName != nil) {
+        pathParams[@"attachName"] = attachName;
+    }
+    
+    
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if(storage != nil) {
+        
+        queryParams[@"storage"] = storage;
+    }
+    if(folder != nil) {
+        
+        queryParams[@"folder"] = folder;
+    }
+    
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
+    
+    
+    
+    // HTTP header `Accept`
+    headerParams[@"Accept"] = [ASPApiClient selectHeaderAccept:@[@"application/json", @"text/json", @"application/xml", @"text/xml", @"text/javascript"]];
+    if ([headerParams[@"Accept"] length] == 0) {
+        [headerParams removeObjectForKey:@"Accept"];
+    }
+    
+    // response content type
+    NSString *responseContentType;
+    if ([headerParams objectForKey:@"Accept"]) {
+        responseContentType = [headerParams[@"Accept"] componentsSeparatedByString:@", "][0];
+    }
+    else {
+        responseContentType = @"";
+    }
+    
+    // request content type
+    NSString *requestContentType = [ASPApiClient selectHeaderContentType:@[]];
+    
+    // Authentication setting
+    NSArray *authSettings = @[];
+    
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *files = [[NSMutableDictionary alloc] init];
+    
+    
+    
+    
+    
+    return [self.apiClient requestWithCompletionBlock: resourcePath
+                                               method: @"POST"
+                                           pathParams: pathParams
+                                          queryParams: queryParams
+                                           formParams: formParams
+                                                files: files
+                                                 body: bodyParam
+                                         headerParams: headerParams
+                                         authSettings: authSettings
+                                   requestContentType: requestContentType
+                                  responseContentType: responseContentType
+                                         responseType: @"ASPEmailDocumentResponse*"
+                                      completionBlock: ^(id data, NSError *error) {
+                                          
+                                          completionBlock((ASPEmailDocumentResponse*)data, error);
+                                      }
+            ];
+}
 
 @end
