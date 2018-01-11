@@ -1,5 +1,5 @@
 # Aspose.Email for Cloud SDKs
-This folder contains SDKs for [Aspose.Email for Cloud](http://www.aspose.com/cloud/email-api.aspx) for various platforms.
+This folder contains SDKs for [Aspose.Email for Cloud](https://products.aspose.cloud/email/cloud) for various platforms.
 
 <p align="center">
   <a title="Download ZIP" href="https://github.com/asposeemail/Aspose_Email_Cloud/archive/master.zip">
